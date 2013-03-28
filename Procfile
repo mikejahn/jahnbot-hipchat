@@ -1,1 +1,1 @@
-web: bin/hubot -a campfire -n jahnbot
+web: bin/hubot --adapter hipchat
