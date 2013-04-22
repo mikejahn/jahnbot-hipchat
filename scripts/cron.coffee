@@ -30,11 +30,12 @@ module.exports = (robot) ->
     for own id, job of robot.brain.data.cronjob
       registerNewJob robot, id, job[0], job[1], job[2]
 
-  robot.respond /(?:new|add) job "(.*?)" (.*)$/i, (msg) ->
+  robot.respond /(?:new|add) job "(.*?)" (.*)$/i (.*)$/i, (msg) ->
     try
-      id = createNewJob robot, msg.match[1], msg.message.user, msg.match[2]
+      id = createNewJob robot, msg.match[1], msg.match[2], msg.match[3]
       msg.send "Job #{id} created"
-      msg.send "User: #{msg}"
+      msg.send "User: #{msg.match[2]}"
+      msg.send "Message: #{msg.match[3]}"
     catch error
       msg.send "Error caught parsing crontab pattern: #{error}. See http://crontab.org/ for the syntax"
 
