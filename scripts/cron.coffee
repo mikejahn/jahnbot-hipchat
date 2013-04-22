@@ -34,6 +34,7 @@ module.exports = (robot) ->
     try
       id = createNewJob robot, msg.match[1], msg.message.user, msg.match[2]
       msg.send "Job #{id} created"
+      msg.send "User: #{msg}"
     catch error
       msg.send "Error caught parsing crontab pattern: #{error}. See http://crontab.org/ for the syntax"
 
