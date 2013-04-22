@@ -19,8 +19,7 @@
     "hubot-scripts": ">= 2.4.1",
     "optparse": "1.0.3",
     "hubot-hipchat": "2.4.5",
-    "cheerio": "0.7.0",
-    "cron": "1.0.1"
+    "cheerio": "0.7.0"
   },
 
   "engines": {
