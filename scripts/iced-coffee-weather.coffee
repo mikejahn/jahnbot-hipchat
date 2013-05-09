@@ -22,7 +22,7 @@
 
 cheerio = require('cheerio')
 
-iced_coffee_weather_id = '41.8854264,-87.6232801'
+iced_coffee_weather_id = "41.8854264,-87.6232801"
 
 module.exports = (robot) ->
   robot.respond /is it iced (coffee|latte) weather/i, (msg) ->
@@ -30,7 +30,7 @@ module.exports = (robot) ->
       msg.send "I don't know where you are, so I can't say. Make sure to set HUBOT_ICED_COFFEE_WEATHER_ID"
       return
 
-    url = "http://isiticedcoffeeweather.com/#f/{iced_coffee_weather_id}"
+    url = "http://isiticedcoffeeweather.com/#f/41.8854264,-87.6232801"
     msg
       .http(url)
       .header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6')
