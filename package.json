@@ -20,7 +20,8 @@
     "ndivvy": "0.0.9",
     "optparse": "1.0.4",
     "hubot-hipchat": "2.5.1-4",
-    "cheerio": "0.12.2"
+    "cheerio": "0.12.2",
+    "geocoder": "0.1.0"
   },
 
   "engines": {
