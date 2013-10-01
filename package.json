@@ -21,7 +21,8 @@
     "optparse": "1.0.4",
     "hubot-hipchat": "2.5.1-4",
     "cheerio": "0.12.2",
-    "geocoder": "0.1.0"
+    "geocoder": "0.1.0",
+    "jsdom": "0.8.6"
   },
 
   "engines": {

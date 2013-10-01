@@ -2,7 +2,7 @@
 #   Find Divvy bikes near you or your office
 #
 # Commands:
-#   hubot find me divvy bikes
+#   hubot find me divvy bikes {location} - Find nearest divvy bikes near given address
 
 nDivvy = require( "ndivvy" )
 geocoder = require( "geocoder" )
@@ -18,4 +18,4 @@ module.exports = (robot) ->
   		nDivvy.nearbyStations(lat,lng,null,5).done (statusCode, stations) ->
   			for station in stations
     			msg.send "Name: #{station.station.stationName}\n Available Bikes: #{station.station.availableBikes}\n Available Docks: #{station.station.availableDocks}\n Google Maps Link: http://maps.google.com/?q=#{station.station.latitude},#{station.station.longitude}\n"
-    			msg.send "http://maps.google.com/maps/api/staticmap?markers=#{station.station.latitude},#{station.station.longitude}&size=400x400&maptype=hybrid&sensor=false&format=png" 
+    			msg.send "http://maps.google.com/maps/api/staticmap?markers=#{station.station.latitude},#{station.station.longitude}&size=400x400&maptype=hybrid&sensor=false&format=png"
