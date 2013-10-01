@@ -17,4 +17,4 @@ module.exports = (robot) ->
   		lng = data.results[0].geometry.location.lng
   		nDivvy.nearbyStations(lat,lng,null,5).done (statusCode, stations) ->
   			for station in stations
-    			msg.send "Name: #{station.station.stationName}\n Available Bikes: #{station.station.availableBikes}\n Available Docks: #{station.station.availableDocks}" 
+    			msg.send "Name: #{station.station.stationName}\n Available Bikes: #{station.station.availableBikes}\n Available Docks: #{station.station.availableDocks}\n Google Maps Link: http://maps.google.com/?q=#{station.station.latitude},#{station.station.longitude} " 
