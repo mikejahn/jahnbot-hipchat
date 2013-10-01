@@ -12,4 +12,5 @@ module.exports = (robot) ->
     jsdom.env "http://www.isthegovernmentshutdown.com", ["http://code.jquery.com/jquery.js"], (errors, window) ->
       $ = window.$;
       msg.send "#{Util.inspect($('body').find('td p:first').text())}"
+      msg.send "http://www.isthegovernmentshutdown.com"
   	
